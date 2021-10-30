@@ -1,0 +1,4 @@
+artifact_location: file:///Users/ngohoanhkhoa/Documents/CodeProjects/kaggle/NLP_with_Disaster_Tweets/mlruns/2
+experiment_id: '2'
+lifecycle_stage: active
+name: test1

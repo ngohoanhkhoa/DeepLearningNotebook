@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/ngohoanhkhoa/Documents/CodeProjects/kaggle/NLP_with_Disaster_Tweets/mlruns/4/49cf878c6f584e6bb2b7626b41786dad/artifacts
+end_time: 1635597193920
+entry_point_name: ''
+experiment_id: '4'
+lifecycle_stage: active
+name: ''
+run_id: 49cf878c6f584e6bb2b7626b41786dad
+run_uuid: 49cf878c6f584e6bb2b7626b41786dad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1635597191759
+status: 3
+tags: []
+user_id: ngohoanhkhoa
