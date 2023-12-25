@@ -1,0 +1,1 @@
+{"raw_data": {"rows": 1797, "columns": 65, "file_size": 495375}, "X_train": {"rows": 1437, "columns": 64, "file_size": 393323}, "X_test": {"rows": 360, "columns": 64, "file_size": 99091}, "y_train": {"rows": 1437, "columns": 1, "file_size": 2881}, "y_predict": {"rows": 360, "columns": 1, "file_size": 728}}

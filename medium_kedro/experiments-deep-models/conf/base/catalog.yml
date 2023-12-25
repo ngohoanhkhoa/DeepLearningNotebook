@@ -1,0 +1,32 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+raw_data:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/raw_data.csv
+
+X_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/X_train.csv
+
+y_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/y_train.csv
+
+X_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/X_test.csv
+
+y_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/y_test.csv
+
+y_predict:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/y_predict.csv
+
+model:
+    type: experiments_deep_models.pipelines.pipeline_digits.extras.torch_model.TorchModel
+    filepath: data/06_models/NeuralNetwork.pickle
