@@ -1,7 +1,7 @@
 [tool.kedro]
 package_name = "experiments_deep_models"
 project_name = "experiments_deep_models"
-kedro_init_version = "0.18.13"
+kedro_init_version = "0.19.1"
 
 [tool.isort]
 profile = "black"

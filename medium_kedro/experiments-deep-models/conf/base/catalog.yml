@@ -4,29 +4,37 @@
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
 
 raw_data:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/01_raw/raw_data.csv
 
 X_train:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/05_model_input/X_train.csv
 
 y_train:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/05_model_input/y_train.csv
 
 X_test:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/05_model_input/X_test.csv
 
 y_test:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/05_model_input/y_test.csv
 
 y_predict:
-  type: pandas.CSVDataSet
+  type: pandas.CSVDataset
   filepath: data/07_model_output/y_predict.csv
 
 model:
     type: experiments_deep_models.pipelines.pipeline_digits.extras.torch_model.TorchModel
     filepath: data/06_models/NeuralNetwork.pickle
+
+hyperparams:
+  type: tracking.JSONDataset
+  filepath: data/08_reporting/hyperparams.json
+
+scores:
+  type: tracking.MetricsDataset
+  filepath: data/08_reporting/scores.json

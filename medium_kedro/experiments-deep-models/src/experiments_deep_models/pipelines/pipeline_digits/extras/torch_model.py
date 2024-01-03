@@ -1,10 +1,10 @@
 from os.path import isfile
 from typing import Any, Dict
 import torch
-from kedro.io import AbstractDataSet
+from kedro.io import AbstractDataset
 
 
-class TorchModel(AbstractDataSet):
+class TorchModel(AbstractDataset):
 
     def _describe(self) -> Dict[str, Any]:
         return dict(filepath=self._filepath)
