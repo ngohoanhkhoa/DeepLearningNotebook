@@ -40,7 +40,7 @@ def split_dataset(df: pd.DataFrame, test_size: float) -> Tuple[pd.DataFrame]:
 
     return df_X_train, df_X_test, df_y_train, df_y_test
 
-def fit_model(df_X: pd.DataFrame, df_y: pd.DataFrame, epochs: int, batch_size: int, dimension: int) -> nn.Module:
+def fit_model(df_X: pd.DataFrame, df_y: pd.DataFrame, epochs: int, batch_size: int, dimension: int) -> Tuple[nn.Module, dict]:
     model = NeuralNetwork(dimension=dimension)
     optimizer = torch.optim.SGD(model.parameters(), lr=0.002)
     tensor_X = torch.from_numpy(df_X.to_numpy()).float()
@@ -85,7 +85,7 @@ def predict_data(model: nn.Module, df_X: pd.DataFrame, batch_size: int) -> pd.Da
     
     return df_y_predict
 
-def evaluate_model(df_y_test: pd.DataFrame, df_y_predict: pd.DataFrame) -> pd.DataFrame:
+def evaluate_model(df_y_test: pd.DataFrame, df_y_predict: pd.DataFrame) -> dict:
     f1_score = metrics.f1_score(df_y_test, df_y_predict, average="macro")
     precision_score = metrics.precision_score(df_y_test, df_y_predict, average="macro")
     recall_score = metrics.recall_score(df_y_test, df_y_predict, average="macro")
